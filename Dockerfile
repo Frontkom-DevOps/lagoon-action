@@ -1,6 +1,6 @@
 # Use the uselagoon/lagoon-cli as a base image
 # FROM uselagoon/lagoon-cli as base
-FROM ghcr.io/uselagoon/lagoon-cli:v0.30.1 as base
+FROM ghcr.io/uselagoon/lagoon-cli:v0.30.1 AS base
 
 
 RUN apk update && apk upgrade && apk add python3 py3-pip
@@ -20,11 +20,11 @@ COPY lagoon.yml /rootcp/.lagoon.yml
 RUN ln -s /lagoon /usr/local/bin/lagoon
 
 # Set up environment variable for the SSH key
-ENV INPUT_SSH_PRIVATE_KEY ""
-ENV INPUT_LAGOON_GRAPHQL_ENDPOINT "https://api.lagoon.amazeeio.cloud/graphql"
-ENV INPUT_LAGOON_SSH_HOSTNAME "ssh.lagoon.amazeeio.cloud"
-ENV INPUT_LAGOON_PORT "32222"
-ENV INPUT_LAGOON_COMMAND "whoami"
+ENV INPUT_SSH_PRIVATE_KEY=""
+ENV INPUT_LAGOON_GRAPHQL_ENDPOINT="https://api.lagoon.amazeeio.cloud/graphql"
+ENV INPUT_LAGOON_SSH_HOSTNAME="ssh.lagoon.amazeeio.cloud"
+ENV INPUT_LAGOON_PORT="32222"
+ENV INPUT_LAGOON_COMMAND="whoami"
 
 WORKDIR /
 
