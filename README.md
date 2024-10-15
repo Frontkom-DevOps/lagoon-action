@@ -10,7 +10,7 @@ To use this GitHub Action, you'll need to set up the following:
 
 ### GitHub Action Secret
 
-* You will want to contact your Lagoon API administrator to set up a user with the [developer role](https://docs.lagoon.sh/concepts-basics/building-blocks/roles/) on the project you're going to be interacting with using this action.
+* You will want to contact your Lagoon API administrator to set up a user with the [maintainer role](https://docs.lagoon.sh/concepts-basics/building-blocks/roles/) on the project you're going to be interacting with using this action.
 * You should then add an SSH key to this user's account that will _only_ be used by this action.
 * Create a secret in your GitHub repository that contains the private SSH key for authenticating with Lagoon. To add a secret:
 
